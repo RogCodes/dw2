@@ -7,17 +7,17 @@ XAMPP
 Chrome Browser
 CMD
 
-Number 1 (Java)
+Number 1 (JS)
 EDITOR    : Visual Code
-Compiler  : https://www.compilejava.net
+Compiler  : https://es6console.com/
 
-Number 2 (Java) Done
+Number 2 (HTML) Done
 EDITOR    : Visual Code
-Compiler  : https://www.compilejava.net
+Compiler  : https://www.onlinegdb.com/
 
-Number 3 (Java) Done
+Number 3 (HTML) Done
 EDITOR    : Visual Code
-Compiler  : https://www.compilejava.net
+Compiler  : https://www.onlinegdb.com/
 
 Number 4 (My Sql) Done
 Tools     : CMD
