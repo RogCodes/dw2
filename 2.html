@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dumbways Soal 2</title>
+</head>
+
+<body>
+    <h2>Soal Dumbways No 2 : menghitung total elemen pada array, mengambil nilai terkecil, dan nilai terbesar</h2>
+    <input type="text" id="array_data" placeholder="Masukan Deretan Array, Ex : 3,5,6"
+        style="padding: 5px 13px;width: 250px;">
+    <button type="button" style="padding: 5px 13px;" onclick="eksekusi()">Eksekusi</button>
+    <h3 style="display: none;">Hasil dibawah</h3>
+    <div id="hasil" style="font-family: courier new;font-size: 22px;font-weight: bold; line-height:21px;padding: 10px;">
+    </div>
+    <script type="text/javascript">
+        function eksekusi() {
+            var inputan = document.getElementById('array_data').value;
+            var array_data = inputan.split(',');
+            var jumlah_array = parseInt(array_data.length);
+            var hasil_akhir_array = [];
+            var hasil_akhir_html = 'Array yang anda input : <font color="red">[' + inputan + ']</font><br><br>';
+
+            for (var a = 0; a < jumlah_array; a++) {
+                var jumlah_perhitungan = 0;
+                var hasil_html = `Hitung indeks ${a} : `;
+
+                for (var b = 0; b < jumlah_array; b++) {
+                    if (a != b) {
+                        var tambah = '';
+                        if (a != (parseInt(jumlah_array) - 1)) {
+                            if (b != (parseInt(jumlah_array) - 1)) {
+                                tambah = ' + ';
+                            }
+                        } else {
+                            if (b != (parseInt(jumlah_array) - 2)) {
+                                tambah = ' + ';
+                            }
+                        }
+                        hasil_html = hasil_html + array_data[b] + tambah;
+                        jumlah_perhitungan = parseInt(jumlah_perhitungan) + parseInt(array_data[b]);
+                    }
+                }
+
+                hasil_html = hasil_html + ' = ' + jumlah_perhitungan;
+                hasil_akhir_html = hasil_akhir_html + hasil_html + '<br>';
+                hasil_akhir_array.push(jumlah_perhitungan);
+            }
+            var nilai_terkecil = Math.min.apply(Math, hasil_akhir_array);
+            var nilai_terbesar = Math.max.apply(Math, hasil_akhir_array);
+
+            hasil_akhir_html = hasil_akhir_html + `<br>Nilai Terkecil adalah : <font color="red">${nilai_terkecil}</font><br>
+                                                                    Nilai Terbesar adalah : <font color="red">${nilai_terbesar}</font><br>`;
+            document.getElementById("hasil").innerHTML = hasil_akhir_html;
+
+            // console.log(hasil_akhir_array);
+        }
+    </script>
+</body>
+
+</html>
