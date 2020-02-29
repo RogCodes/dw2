@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dumbways Soal 3</title>
+</head>
+
+<body>
+    <h2>Soal Dumbways No 3 : Fungsi untuk mencetak pattern persegi dari karakter “@” dan “=”</h2>
+    <input type="number" id="nilai_ganjil" placeholder="Masukan Nilai Ganjil" style="padding: 5px 13px;">
+    <button type="button" style="padding: 5px 13px;" onclick="eksekusi()">Eksekusi</button>
+    <h3 style="display: none;">Hasil dibawah</h3>
+    <div id="hasil" style="font-family: courier new;font-size: 25px;font-weight: bold; line-height:24px;padding: 10px;">
+
+    </div>
+    <script type="text/javascript">
+        function eksekusi() {
+            var nilai_ganjil = document.getElementById('nilai_ganjil').value;
+            if (nilai_ganjil > 0) {
+                if (nilai_ganjil % 2 == 1) {
+                    var hasil_akhir = '';
+                    var jeda_kiri_kanan = 0;
+                    var penambah = Math.floor(nilai_ganjil / 2);
+                    for (var baris = 1; baris <= nilai_ganjil; baris++) {
+                        var html = '';
+                        for (var kolom = 1; kolom <= nilai_ganjil; kolom++) {
+                            if (kolom > jeda_kiri_kanan && kolom <= (parseInt(nilai_ganjil) - parseInt(jeda_kiri_kanan))) {
+                                html = html + '@';
+                            } else {
+                                html = html + '=';
+                            }
+                        }
+                        if (baris <= penambah) {
+                            jeda_kiri_kanan++;
+                        } else {
+                            jeda_kiri_kanan--;
+                        }
+                        html = html + "<br>";
+                        hasil_akhir = hasil_akhir + html;
+                    }
+                    document.getElementById("hasil").innerHTML = hasil_akhir;
+                } else {
+                    alert('Maaf nilai yang di input harus Ganjil');
+                }
+            } else {
+                alert('Maaf nilai tidak bisa kurang dari nol ( 0 )');
+            }
+        }
+    </script>
+</body>
+
+</html>
