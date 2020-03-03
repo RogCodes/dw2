@@ -8,19 +8,19 @@ Chrome Browser
 CMD
 
 -Number 1 (JS) Done
-EDITOR    : Visual Code
+ EDITOR    : Visual Code
 
-Compiler  : https://es6console.com/
+ Compiler  : https://es6console.com/
 
 -Number 2 (HTML) Done
-EDITOR    : Visual Code
+ EDITOR    : Visual Code
 
-Compiler  : https://www.onlinegdb.com/
+ Compiler  : https://www.onlinegdb.com/
 
 -Number 3 (HTML) Done
-EDITOR    : Visual Code
+ EDITOR    : Visual Code
 
-Compiler  : https://www.onlinegdb.com/
+ Compiler  : https://www.onlinegdb.com/
 
 -Number 4 (My Sql) Done
-Tools     : CMD
+ Tools     : CMD
