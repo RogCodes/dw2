@@ -24,6 +24,7 @@ CMD
 
 -Number 4 (My Sql) Done
  Tools     : CMD
+ 
  1.Membuat table
 
 ![Membuat Table](https://user-images.githubusercontent.com/59035856/75750363-9cf39080-5d56-11ea-8bac-c3653403bb4d.PNG)
